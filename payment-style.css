@@ -1,0 +1,122 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body and Container */
+body {
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('payment-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.payment-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Payment Box */
+.payment-box {
+    background: white;
+    padding: 30px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #333;
+    transition: transform 0.3s;
+}
+
+.payment-box:hover {
+    transform: translateY(-5px);
+}
+
+/* Payment Heading */
+.payment-box h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Selected Seats and Total */
+.selected-seats {
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 1em;
+}
+
+.selected-seats p {
+    margin: 10px 0;
+    color: #333;
+}
+
+.selected-seats span {
+    font-weight: bold;
+}
+
+/* Passenger Information Form */
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+.upi-input {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.upi-input label {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.upi-input input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 1em;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+.upi-input input:focus {
+    border-color: #007bff;
+}
+
+/* Proceed Button */
+.proceed-btn {
+    background-color: #28a745; /* Green color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.proceed-btn:hover {
+    background-color: #218838; /* Darker green */
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .payment-box {
+        width: 90%; /* Use a smaller width on smaller screens */
+    }
+}

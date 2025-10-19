@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.bus-list {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bus-list-item {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.bus-list-item h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.bus-list-item p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.view-seats {
+    background-color: #ff4b5c;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.view-seats:hover {
+    background-color: #e64550;
+}

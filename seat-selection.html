@@ -1,0 +1,318 @@
+<!--!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seat Allocation</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="app.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h4>&larr; Bus Travels</h4><span><a href="/Piechart.html">Pie chart</a></span>
+      <hr />
+      <div class="seatTypes">
+        <h6>Know about Your seat Types &#9888;</h6>
+        <div class="seat2">
+          <span class="typename">Available</span>
+        </div>
+        <div class="seat2 ladies2">
+          <p class="typename">Available only for ladies</p>
+        </div>
+        <div class="seat2 bookothers">
+          <p class="typename">Booked by others</p>
+        </div>
+        <div class="seat2 booked2">
+          <p class="typename">Selected by You</p>
+        </div>
+        <div class="seat2 ladiesbook">
+          <p class="typename">Booked by female passangers</p>
+        </div>
+      </div>
+      <div class="deck lower">
+        <h4>Lower deck</h4>
+        <div
+          class="seat"
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="₹120"
+        >
+          1
+        </div>
+        <div class="seat1"></div>
+        <div class="seat ladies">2</div>
+        <div class="seat ladies">3</div>
+        <br />
+        <div
+          class="seat"
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="₹120"
+        >
+          4
+        </div>
+        <div class="seat1"></div>
+        <div class="seat">5</div>
+        <div class="seat">6</div>
+        <br />
+        <div
+          class="seat"
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="₹120"
+        >
+          7
+        </div>
+        <div class="seat1"></div>
+        <div class="seat ladies">8</div>
+        <div class="seat ladies">9</div>
+        <br />
+        <div
+          class="seat"
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="₹120"
+        >
+          10
+        </div>
+        <div class="seat1"></div>
+        <div class="seat">11</div>
+        <div class="seat">12</div>
+        <br />
+        <div
+          class="seat"
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="₹120"
+        >
+          13
+        </div>
+        <div class="seat1"></div>
+        <div class="seat">14</div>
+        <div class="seat">15</div>
+        <br />
+      </div>
+      <div class="deck upper">
+        <h4>Upper deck</h4>
+        <div class="seat">1</div>
+        <div class="seat1"></div>
+        <div class="seat ladies">2</div>
+        <div class="seat ladies">3</div>
+        <br />
+        <div
+          class="seat"
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="₹120"
+        >
+          4
+        </div>
+        <div class="seat1"></div>
+        <div class="seat">5</div>
+        <div class="seat">6</div>
+        <br />
+        <div
+          class="seat"
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="₹120"
+        >
+          7
+        </div>
+        <div class="seat1"></div>
+        <div class="seat ladies">8</div>
+        <div class="seat ladies">9</div>
+        <br />
+        <div
+          class="seat"
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="₹120"
+        >
+          10
+        </div>
+        <div class="seat1"></div>
+        <div class="seat">11</div>
+        <div class="seat">12</div>
+        <br />
+        <div
+          class="seat"
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="₹120"
+        >
+          13
+        </div>
+        <div class="seat1"></div>
+        <div class="seat">14</div>
+        <div class="seat">15</div>
+        <br />
+      </div>
+      <div class="totalprice" id="totalPrice">
+        <p id="numSeats">0</p>
+        <p>Total Price: ₹<span id="totalAmount">0</span></p>
+        <button type="button" class="btn btn-primary">Continue</button>
+        <button type="button" class="btn btn-secondary" id="resetButton">
+          Reset
+        </button>
+      </div>
+    </div>
+
+    < Include Bootstrap JavaScript and jQuery >
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script></script>
+    <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  </body>
+</html-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seat Allocation - <?php echo $bus_name; ?></title>
+    <link rel="stylesheet" href="stylesss.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        /* Journey Details Section */
+        .journey-details {
+            background-color: #f0f0f5;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .journey-details h4 {
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+        .journey-info {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .journey-info p {
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Journey Details Section -->
+        <div class="journey-details">
+            <h4>Journey Details</h4>
+            <div class="journey-info">
+                <p>Bus Name: <strong><?php echo $bus_name; ?></strong></p>
+                <p>From: <strong><?php echo $from; ?></strong></p>
+                <p>To: <strong><?php echo $to; ?></strong></p>
+                <p>Departure Time: <strong><?php echo $departure_time; ?></strong></p>
+                <p>Arrival Time: <strong><?php echo $arrival_time; ?></strong></p>
+            </div>
+        </div>
+
+        <!-- Seat Allocation Section -->
+        <h4>&larr; Bus Travels - <?php echo $bus_name; ?></h4>
+        <span><a href="/Piechart.html">Pie chart</a></span>
+        <hr />
+
+        <!-- Seat Types Information -->
+        <div class="seatTypes">
+            <h6>Know about Your Seat Types &#9888;</h6>
+            <div class="seat2"><span class="typename">Available</span></div>
+            <div class="seat2 ladies2"><p class="typename">Available only for ladies</p></div>
+            <div class="seat2 bookothers"><p class="typename">Booked by others</p></div>
+            <div class="seat2 booked2"><p class="typename">Selected by You</p></div>
+            <div class="seat2 ladiesbook"><p class="typename">Booked by female passengers</p></div>
+        </div>
+
+        <!-- Lower Deck Seats -->
+        <div class="deck lower">
+            <h4>Lower deck</h4>
+            <div class="seat" data-bs-toggle="tooltip" title="₹120">1</div>
+            <div class="seat1"></div>
+            <!-- Add more seats as needed -->
+        </div>
+
+        <!-- Upper Deck Seats -->
+        <div class="deck upper">
+            <h4>Upper deck</h4>
+            <div class="seat" data-bs-toggle="tooltip" title="₹90">1</div>
+            <div class="seat1"></div>
+            <!-- Add more seats as needed -->
+        </div>
+
+        <!-- Total Price Section -->
+        <div class="totalprice" id="totalPrice">
+            <p>Seats: <span id="numSeats">0</span></p>
+            <p>Total Price: ₹<span id="totalAmount">0</span></p>
+            <button type="button" class="btn btn-primary" id="continueButton" onclick="showPassengerInfo()">Continue</button>
+            <button type="button" class="btn btn-secondary" id="resetButton">Reset</button>
+        </div>
+
+        <!-- Passenger Information Form (Hidden until seats selected) -->
+        <div class="passenger-info" id="passengerInfoForm" style="display:none;">
+            <h5>Enter Passenger Information</h5>
+            <form id="passengerForm" method="POST">
+                <div class="mb-3">
+                    <label for="passengerName" class="form-label">Passenger Name</label>
+                    <input type="text" class="form-control" id="passengerName" name="passenger_name" required />
+                </div>
+                <div class="mb-3">
+                    <label for="passengerAge" class="form-label">Age</label>
+                    <input type="number" class="form-control" id="passengerAge" name="passenger_age" required />
+                </div>
+                <div class="mb-3">
+                    <label for="passengerGender" class="form-label">Gender</label>
+                    <select class="form-select" id="passengerGender" name="passenger_gender" required>
+                        <option value="" disabled selected>Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <input type="hidden" name="selected_seat" id="selectedSeat" value="" />
+                <button type="submit" class="btn btn-success">Proceed to Payment</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap JavaScript and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+        // JavaScript function to show passenger information form
+        function showPassengerInfo() {
+            const selectedSeats = document.querySelectorAll('.seat.selected'); 
+            const numSeats = selectedSeats.length;
+            const totalPrice = numSeats * 120;
+
+            document.getElementById('numSeats').innerText = numSeats;
+            document.getElementById('totalAmount').innerText = totalPrice;
+            document.getElementById('passengerInfoForm').style.display = 'block';
+            document.getElementById('selectedSeat').value = Array.from(selectedSeats).map(seat => seat.innerText).join(', ');
+        }
+
+        document.querySelectorAll('.seat').forEach(seat => {
+            seat.addEventListener('click', function() {
+                this.classList.toggle('selected');
+            });
+        });
+
+        document.getElementById('resetButton').addEventListener('click', function() {
+            document.querySelectorAll('.seat.selected').forEach(seat => {
+                seat.classList.remove('selected');
+            });
+            document.getElementById('passengerInfoForm').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
